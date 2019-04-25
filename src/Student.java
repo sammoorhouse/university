@@ -1,9 +1,12 @@
+import java.util.HashMap;
+import java.util.Map;
 import java.util.Objects;
 
 public class Student {
     private String name;
     private int studentId;
     private String emailAddress;
+    private Map<String, Double> scores = new HashMap<String, Double>();
 
     public Student(String name, int studentId, String emailAddress) {
         this.name = name;
@@ -21,6 +24,22 @@ public class Student {
 
     public String getEmailAddress() {
         return emailAddress;
+    }
+
+    public void Scored(String test, Double score){
+        this.scores.put(test, score);
+    }
+
+    public double getAverageScore(){
+        double averageScore = 0.0;
+        int count = 0;
+
+        for(double score : scores.values()){
+            count++;
+            averageScore += score;
+        }
+
+        return averageScore / count;
     }
 
     @Override

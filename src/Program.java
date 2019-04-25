@@ -14,5 +14,9 @@ public class Program {
         Lecturer l = new Lecturer("James bond", 0, 1, "jamesbond@uni.edu");
 
         Course c = new Course("Java for beginners", l, students);
+
+        System.out.println(c.getStudentNames());
+
+        System.out.println(c.getAverageGrades());
     }
 }
