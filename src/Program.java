@@ -4,7 +4,7 @@ import java.util.List;
 public class Program {
 
     public static void main(String[] args){
-        List<Student> students = Arrays.ofList(
+        List<Student> students = Arrays.asList(
                 new Student("Sam", 0, "sam@uni.edu"),
                 new Student("James", 1, "james@uni.edu"),
                 new Student("Sarah", 2, "sarah@uni.edu"),
